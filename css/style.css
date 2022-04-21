@@ -11,11 +11,11 @@ img{}
 .txtbox .category{color: #5A8FFF; font-size: 14px; font-weight: 600;}
 .txtbox .title{font-size: 25px; margin-bottom: 30px}
 .txtbox .description{margin-bottom: 35px;}
-.txtbox ul{margin-top: 35px;}
-.txtbox ul li{}
-.txtbox ul li img{max-width: 50px;}
+.txtbox ul{margin-top: 35px; }
+.txtbox ul li{display: flex; flex-direction: column; justify-content: space-between;}
+.txtbox ul li img{max-width: 36px;}
 .txtbox ul li strong{}
-.txtbox ul li p{}
+.txtbox ul li p{font-size: 14px;}
 .btn-blue{border-radius: 50px; color: white; width: 150px; height: 40px; background-color: #5A8FFF; font-size: 1rem; }
 
 
