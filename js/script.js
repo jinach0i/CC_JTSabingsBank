@@ -1,4 +1,14 @@
 AOS.init();
+
+window.onscroll=스크롤헤더;
+function 스크롤헤더() {
+    if (document.body.scrollTop>200 || document.documentElement.scrollTop>120) {
+        document.getElementById('header').style.top='0';
+    }else{
+        document.getElementById('header').style.top='-120px';
+    }
+};
+
 var sectionCar = document.querySelectorAll('.section-carousels'),
     mainCar = document.querySelectorAll('.main-carousels');
 

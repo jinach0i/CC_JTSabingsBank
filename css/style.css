@@ -1,6 +1,6 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 /* COMMON: */
-body{}
+body{font-family: 'NotoSansKR';}
 #wrap{}
 li{list-style: none; text-align: center; }
 a{text-decoration: none; color: black;}
@@ -8,15 +8,15 @@ button{border: 2px solid white; background: transparent; color: white; border-ra
 img{}
 .inner1200{width: 1200px; margin: 0 auto;}
 .txtbox{}
-.txtbox .category{}
-.txtbox .description{}
-.txtbox button.more{}
-.txtbox ul{}
+.txtbox .category{color: #5A8FFF; font-size: 14px; font-weight: 600;}
+.txtbox .title{font-size: 25px; margin-bottom: 30px}
+.txtbox .description{margin-bottom: 35px;}
+.txtbox ul{margin-top: 35px;}
 .txtbox ul li{}
-.txtbox ul li img{}
+.txtbox ul li img{max-width: 50px;}
 .txtbox ul li strong{}
 .txtbox ul li p{}
-
+.btn-blue{border-radius: 50px; color: white; width: 150px; height: 40px; background-color: #5A8FFF; font-size: 1rem; }
 
 
 /* SKIP: */
@@ -66,7 +66,7 @@ section{width: 100%; height: 100vh;}
 /* SECTION1: */
 .main-banners{width: 100%; height: 80vh;}
 .main-banners .swiper-slide{position: relative;}
-.main-banners .swiper-slide img{height: 100%;}
+.main-banners .swiper-slide img{width: 100%; max-height: 100%;}
 .main-banners .swiper-slide .txtbox{position: absolute; top: 35%; right: 10%;}
 .main-banners .swiper-slide .txtbox p{color: white; font-size: 2.5rem; text-shadow: 2px 2px 10px #666; }
 .main-banners .swiper-slide .txtbox p:nth-child(3){font-size: 18px; margin: 20px 0 40px;}
@@ -84,11 +84,16 @@ section{width: 100%; height: 100vh;}
 .downloads ul li{margin: auto 4%;}
 .downloads button{border: 1px solid lightgray;}
 /* SECTION2: */
-#parasol{width: 100%; height: 100vh; display: flex; background-image: url('../img/pro_bg.png') no-repeat 100% 100%/cover;}
-#parasol .image{background-image: url('../img/loanpro01.png') no-repeat center center/cover; width: 50%;}
-#parasol .txtbox{}
+#parasol{width: 100%; height: 100vh; display: flex; background: url('../img/pro_bg.png') no-repeat center center/cover;}
+#parasol .image{background: url('../img/loanpro01.png') no-repeat center center/50%; width: 50%; height: 100vh;}
+#parasol .txtbox{width: 50%; transform: translatey(30%);}
+#parasol .txtbox ul{display: flex; justify-content: space-between;}
+#parasol .txtbox ul li{border-right: 1px solid lightgrey; width: 125px; height: 20px; display: flex; flex-direction: column;}
 
 
+
+
+/* SWIPER: */
 .swiper {width: 100%; height: 100vh;}
 .swiper-button-next,.swiper-button-prev{color: white; font-weight: bold; border-bottom: 2px solid aliceblue; width: 56px; height: 28px;}
 .swiper-button-next::after{content: ''; display: block; width: 2px; height: 13px; transform: rotate(-40deg); position: absolute; bottom: -3px; right: 1px; background-color: aliceblue;}
