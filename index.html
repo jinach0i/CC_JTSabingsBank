@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JT저축은행</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/63e5a82675.js" crossorigin="anonymous"></script>
     <script src="./js/script.js" defer></script>
 
 </head>
 
-<body oncontextmenu="return false" ondblclick="return false" ondrag="return false">
+<body oncontextmenu="false" ondblclick="false" ondrag="false" onselectstart="false">
     <div id="skip">
         <ul>
             <li><a href="#header">메뉴로 바로가기</a></li>
@@ -29,8 +32,8 @@
     </div>
     <div id="wrap">
         <header id="header">
-            <div class="inner1200">
-                <h1><a href="./index.html" title="JT저축은행"><img src="./img/logo.png" alt="로고"></a></h1>
+            <div class="inner">
+                <h1><a href="./index.html" title="JT저축은행"><img src="./img/jt_logo_white2.png" alt="로고"></a></h1>
                 <nav id="nav">
                     <nav id="lnb">
                         <ul>
@@ -174,11 +177,12 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="#none"><i class="fa-solid fa-bars"></i></a></li>
                         </ul>
                     </nav>
                 </nav>
-
+                <a href="#none">
+                    <span></span>
+                </a>
             </div>
         </header>
         <main id="main" class="swiper section-carousels">
@@ -203,10 +207,10 @@
                                 <img src="./img/banner-02.png" alt="주배너2">
                                 <div class="txtbox">
                                     <p data-aos-duration="4000" data-aos-delay="3000" data-aos-offset="1">더
-                                        <strong>가깝게</strong>다가가겠습니다.
+                                        <strong>가깝게 </strong>다가가겠습니다.
                                     </p>
                                     <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="1">더
-                                        <strong>빠르게</strong>다가가겠습니다.
+                                        <strong>빠르게 </strong>다가가겠습니다.
                                     </p>
                                     <p data-aos="fade-up" data-aos-duration="2000" data-aos-offset="1">고객의 마음 속에 First,
                                         JT저축은행</p>
@@ -266,8 +270,7 @@
                     </div>
                 </section>
                 <section id="campaign" class="swiper-slide">
-                    <div class="swiper-wrapper">
-                    </div>
+                    
                 </section>
                 <section id="footer" class="swiper-slide">
                     <div class="swiper-wrapper">

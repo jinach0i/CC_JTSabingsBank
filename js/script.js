@@ -9,15 +9,27 @@ function 스크롤헤더() {
     }
 };
 
+document.onmousedown=disableclick;
+  status="오른쪽 클릭은 금지되어 있습니다.";
+  function disableclick(e){
+    if(e.button==2){
+      alert(status);
+      return false;
+    }
+  }
+
+
 var sectionCar = document.querySelectorAll('.section-carousels'),
     mainCar = document.querySelectorAll('.main-carousels');
 
 
 var sectionCar = new Swiper(".section-carousels", {
     direction: "vertical",
+    speed: 1500,
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     autoplay: false,
+    loop: true,
     mousewheel: true,
     pagination: {
         el: ".swiper-pagination",
@@ -26,12 +38,13 @@ var sectionCar = new Swiper(".section-carousels", {
   });
 
 var mainCar = new Swiper(".main-carousels", {
-    spaceBetween: 30,
+    spaceBetween: 0,
+    speed:1000,
     centeredSlides: true,
-    //  autoplay: {
-    //    delay: 3000,
-    //    disableOnInteraction: false,
-    //  },
+     autoplay: {
+       delay: 4000,
+       disableOnInteraction: false,
+     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
