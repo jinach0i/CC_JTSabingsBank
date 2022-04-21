@@ -12,7 +12,7 @@ img{}
 .txtbox .title{font-size: 25px; margin-bottom: 30px}
 .txtbox .description{margin-bottom: 35px;}
 .txtbox ul{margin-top: 35px; }
-.txtbox ul li{display: flex; flex-direction: column; justify-content: space-between; width: calc(100% / 4)}
+.txtbox ul li{display: flex; flex-direction: column; justify-content: space-between; height: 12.555%}
 .txtbox ul li img{max-width: 36px;}
 .txtbox ul li strong{}
 .txtbox ul li p{font-size: 14px;}
