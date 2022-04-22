@@ -1,14 +1,4 @@
-AOS.init();
-
-window.onscroll=스크롤헤더;
-function 스크롤헤더() {
-    if (document.body.scrollTop>200 || document.documentElement.scrollTop>120) {
-        document.getElementById('header').style.top='0';
-    }else{
-        document.getElementById('header').style.top='-120px';
-    }
-};
-
+// 보안]우클릭 방지:
 document.onmousedown=disableclick;
   status="오른쪽 클릭은 금지되어 있습니다.";
   function disableclick(e){
@@ -16,12 +6,26 @@ document.onmousedown=disableclick;
       alert(status);
       return false;
     }
+  };
+
+// HEADER:
+window.onscroll=헤더교체;
+function 헤더교체(){
+  if(document.body.scrollTop>800 || document.documentElement.scrollTop > 800){
+    document.getElementById('nav1').style.top='0';
+    
+  }else{
+    document.getElementById('nav1').style.top='-80px';
   }
+}
 
 
-var sectionCar = document.querySelectorAll('.section-carousels'),
-    mainCar = document.querySelectorAll('.main-carousels');
 
+
+
+
+// LIB:
+AOS.init();
 
 var sectionCar = new Swiper(".section-carousels", {
     direction: "vertical",
@@ -48,6 +52,24 @@ var mainCar = new Swiper(".main-carousels", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+  });
+  
+  var swiper = new Swiper("#savingsCarousels", {
+    // autoplay:{
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
+    navigation: {
+      nextEl: ".swiper-button-next2",
+      prevEl: ".swiper-button-prev2",
+    },
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
     },
   });
   

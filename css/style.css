@@ -4,35 +4,38 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 #wrap{}
 li{list-style: none; text-align: center; }
 a{text-decoration: none; color: black;}
-button{border: 2px solid white; background: transparent; color: white; border-radius: 50px; text-align: center; font-weight: bold; display: inline-block; width: 150px;}
+button{border: 2px solid white; background: transparent; color: white; border-radius: 50px; text-align: center; font-weight: bold; display: inline-block; width: 150px; cursor: pointer;}
 img{}
 .inner{width: 90%; margin: 0 auto;}
 .txtbox{}
 .txtbox .category{color: #5A8FFF; font-size: 14px; font-weight: 600;}
-.txtbox .title{font-size: 25px; margin-bottom: 30px}
+.txtbox .title{font-size: 2rem; margin-bottom: 30px}
 .txtbox .description{margin-bottom: 35px;}
-.txtbox ul{margin-top: 35px; }
-.txtbox ul li{display: flex; flex-direction: column; justify-content: space-between; height: 12.555%}
-.txtbox ul li img{max-width: 36px;}
+.txtbox ul{ }
+.txtbox ul li{display: flex; flex-direction: column; justify-content: center; width: 20%; height: 12.555%}
+.txtbox ul li img{max-width: 36px; margin: 0 auto;}
 .txtbox ul li strong{}
 .txtbox ul li p{font-size: 14px;}
+.titlebox2{height: 30vh; color: whitesmoke; text-align: center; transform: translateY(45%); }
+.titlebox2 h3{margin-bottom: 1rem; font-size: 2rem;}
 .btn-blue{border-radius: 50px; color: white; width: 150px; height: 40px; background-color: #5A8FFF; font-size: 1rem; margin-bottom: 10%;}
+.bold{font-weight: bold;}
 
 /* SKIP: */
 #skip{background-color: black; width: 100%; position: absolute; margin: 0; padding: 0; font-size: 0;}
 #skip ul li a{color: white; padding: 0; font-size: 0; text-align: center; display: block;}
 #skip ul li a:focus{padding: 10px; font-size: 16px;}
 /* HEADER: */
-header{width: 100%; height: 80px; position: fixed; z-index: 9;}
+header{width: 100%; height: 80px; position: fixed; z-index: 9; top: 0; left: 0; right: 0;}
 header .inner{display: flex; justify-content: space-between;}
 header h1{ height: 80px; line-height: 85px;}
 header h1 a{}
 header h1 a img{}
-header #lnb{height: 80px; line-height: 80px;}
-header #lnb ul{display: flex; justify-content: flex-end;}
-header #lnb ul li{width: 100px; height: 40px;}
-header #lnb ul li:hover{font-weight: bold;}
-header #lnb ul li a{font-size: 16px; color: whitesmoke;}
+header #lnb1{height: 80px; line-height: 80px;}
+header #lnb1 ul{display: flex; justify-content: center}
+header #lnb1 ul li{width: 100px; height: 40px;}
+header #lnb1 ul li:hover{font-weight: bold;}
+header #lnb1 ul li a{font-size: 16px; color: whitesmoke;}
 header .inner>a{height: 80px;}
 header .inner>a p{font-size: 10px; color: white;}
 header .inner>a span{display: inline-block; background-color: azure; width: 28px; height: 2px; transform: translateY(30px);}
@@ -63,6 +66,14 @@ header #gnb .depths2 ul li a{color: black; font-weight: bold; font-size: 14px;}
 header #gnb .depths2 .depths2a{display: flex; border-bottom: 1px solid lightgray; padding: 3% 0;}
 header #gnb .depths2 .depths2b{display: flex; padding: 3% 0;}
 
+#nav2 {
+  background: lightyellow;
+	position: fixed;
+    top: -80px;
+    width: 100%; height: 80px;
+    transition: top .4s;
+    
+}
 
 
 /* MAIN: */
@@ -71,12 +82,10 @@ section{width: 100%; height: 100vh;}
 .main-banners{width: 100%; height: 80vh;}
 .main-banners .swiper-slide{position: relative; display: inherit;}
 .main-banners .swiper-slide img{width: 100%; max-height: 100%;}
-.main-banners .swiper-slide .txtbox{position: absolute; top: 35%; right: 20%;}
+.main-banners .swiper-slide .txtbox{position: absolute; top: 35%; right: 25%; text-align: center;}
 .main-banners .swiper-slide .txtbox p{color: white; font-size: 2.5rem; text-shadow: 2px 2px 10px #666; padding-left: 10%; height: 4rem;}
 .main-banners .swiper-slide:last-child .txtbox p{padding-left: 0;}
 .main-banners .swiper-slide .txtbox p:nth-child(3){font-size: 18px; margin: 20px 0 40px;}
-.main-banners .swiper-slide .txtbox p strong{}
-.main-banners .swiper-slide .txtbox {}
 .main-banners .swiper-slide .txtbox button{transition: .4s; width: 150px; height: 40px; margin-right: 15px; font-size: 18px; cursor: pointer;}
 .main-banners .swiper-slide .txtbox button:hover{background-color: white; color: black; }
 .main-banners ul{display: flex;}
@@ -89,13 +98,97 @@ section{width: 100%; height: 100vh;}
 .downloads ul{display: flex;}
 .downloads ul li{margin: auto 4%;}
 .downloads button{border: 1px solid lightgray;}
+
 /* SECTION2: */
-#parasol{width: 100%; height: 100vh; display: flex; background: url('../img/pro_bg.png') no-repeat center center/cover;}
-#parasol .image{background: url('../img/loanpro01.png') no-repeat center center/50%; width: 50%; height: 100vh;}
-#parasol .txtbox{width: 50%; transform: translatey(30%);}
-#parasol .txtbox ul{display: flex; justify-content: left;}
-#parasol .txtbox ul li{border-right: 1px solid lightgrey; width: 125px; height: 84px; display: flex; flex-direction: column;}
+#parasol,#savingsCarousels{width: 100%; height: 100vh; display: flex; background: url('../img/pro_bg.png') no-repeat center center/cover;}
+#parasol .image{background: url('../img/loanpro01.png') no-repeat center center/60%; width: 50%; height: 100vh;}
+#parasol .right{width: 50%; margin: auto 0;}
+#parasol .right .txtbox{margin-left: 3rem;}
+#parasol .right .txtbox ul{display: flex; justify-content: left;}
+#parasol .right .txtbox ul li{border-right: 1px solid lightgrey; width: 125px; height: 84px; display: flex; flex-direction: column;}
+#parasol .right .txtbox ul li:last-child{border-right: none;}
 #parasol .txtbox ul li img{margin: 0 auto;}
+
+/* SECTION3: */
+#savingsCarousels{margin-top: 80px;}
+#savingsCarousels .swiper-wrapper{height: 70vh;}
+#savingsCarousels .swiper-wrapper .swiper-slide{display: flex;}
+#savingsCarousels .swiper-wrapper .swiper-slide>div{width: 50%;}
+#savingsCarousels .swiper-wrapper .swiper-slide .contents{}
+#savingsCarousels .swiper-wrapper .swiper-slide .txtbox{padding: 10%}
+#savingsCarousels .swiper-wrapper .swiper-slide .contents ul{display: flex;}
+#savingsCarousels .swiper-wrapper .swiper-slide .contents ul li{}
+#savingsCarousels .swiper-wrapper .swiper-slide .contents ul li::after{content: ''; width: 1px; height: 60%; background-color: lightgray; display: inline-block;} 
+#savingsCarousels .swiper-wrapper .swiper-slide .contents ul li img{}
+#savingsCarousels .swiper-wrapper .swiper-slide .contents ul li p{}
+#savingsCarousels .swiper-wrapper .swiper-slide .image{}
+#savingsCarousels .swiper-wrapper .deposit{}
+#savingsCarousels .swiper-wrapper .deposit .contents{}
+#savingsCarousels .swiper-wrapper .deposit .image{background: url('../img/depopro01.png') no-repeat center center/70%;}
+#savingsCarousels .swiper-wrapper .installment .image{background: url('../img/depopro02.png') no-repeat center center/70%;}
+#savingsCarousels .swiper-wrapper .attr1 .image{background: url('../img/depopro03.png') no-repeat center center/70%;}
+
+/* SECTION4: */
+#campaign{background: url('../img/section03_bg.png') no-repeat center center/cover; height: 100vh; width: 100%;}
+#campaign .inner{display: flex; flex-direction: column;}
+#campaign .inner .titlebox2{color: black; transform: translateY(50%); }
+#campaign .inner .notice-pannel{background: url('../img/mainesg01.png') no-repeat center center/cover; box-shadow: 5px 5px 15px #444; width: 80%; height: 50vh; margin: 5% auto; border-radius: 25px; overflow: hidden; color: whitesmoke;}
+
+
+/* 시간초가 지나면 display none되고 밑에 글이 올라오고, 시간 초가 더 지나면 ": */
+#campaign .inner .notice-pannel .notice-wrap{}
+#campaign .inner .notice-pannel .notice-wrap ul{position: relative; top: 0; left: 0;}
+#campaign .inner .notice-pannel .notice-wrap ul li{position: absolute; top: 0; left: 0; opacity: 0;}
+#campaign .inner .notice-pannel .notice-wrap ul li:first-child{opacity: 1;}
+#campaign .inner .notice-pannel .notice-wrap ul li a{color: white;}
+#campaign .inner .notice-pannel .notice-wrap ul li button{}
+#campaign .inner .notice-pannel .test1{ }
+#campaign .inner .notice-pannel .test2{ }
+
+
+
+/* SECTION5: */
+#shortcuts{}
+article.top{height: 70vh; background: url('../img/section04_bg.png') no-repeat center center/cover;}
+article.top .inner{display: flex; height: 70vh; flex-direction: column;}
+article.top .titlebox2{height: 30vh; color: whitesmoke; text-align: center; transform: translateY(45%); }
+article.top .titlebox2 h3{margin-bottom: 1rem; font-size: 2rem;}
+article.top .shortcuts{height: 40vh;}
+article.top .shortcuts ul{display: flex; justify-content: space-around;}
+article.top .shortcuts ul li{border-radius: 15px; margin: 2%; width: 20%; height: 12rem; padding: 2rem; text-align: left; cursor: pointer;}
+article.top .shortcuts ul li.calc{background: white url('../img/icon_banner401.png') no-repeat 85% 80%/18%;}
+article.top .shortcuts ul li.find-distributors{background: white url('../img/icon_banner403.png') no-repeat 85% 80%/18%;}
+article.top .shortcuts ul li.direct-call{background: white url('../img/icon_banner404.png') no-repeat 85% 80%/18%;}
+article.top .shortcuts ul li.online-cs{background: white url('../img/icon_banner402.png') no-repeat 85% 80%/18%;}
+article.top .shortcuts ul li a{}
+article.top .shortcuts ul li strong{display: inline-block; margin-bottom: .4rem;}
+article.top .shortcuts ul li p{font-size: .9rem;}
+#footer{height: 30vh; background-color: #F8F8FC; font-size: .8rem;}
+#footer .cs{height: 3rem; line-height: 3rem; border-bottom: 1px solid lightgrey;}
+#footer .cs ul{display: flex; justify-content: space-around;}
+#footer .cs ul li{font-size: 1rem;}
+#footer .cs ul li:not(:first-child):hover a{color: #5A8FFF;}
+#footer .cs ul li a{color: black; font-weight: bold;}
+#footer .cs ul li a span{color: #5A8FFF; margin-left: 15px;}
+#footer .bottom{display: flex;}
+#footer select{width: 33.3333%; border: 1px solid lightgray; background-color: transparent; height: 2rem; margin: 2% 3% 3% 0;border-radius: 5px; font-size: 13px; padding-left: 1rem;}
+#footer .bottom address{display: flex; flex-direction: column; border-right: 1px solid #DADCE1; font-style: normal; width: 45%; margin: 2% auto;}
+#footer .bottom address::after{content: ''; width: 1px; height: 80%; background-color: #DADCE1; }
+#footer .bottom address h3{}
+#footer .bottom address h3 img{width: 25%;}
+#footer .bottom address ul{}
+#footer .bottom address ul li{text-align: left;}
+#footer .bottom select#families{}
+#footer .bottom select#families option{}
+#footer .bottom select#distributors{}
+#footer .bottom select#distributors option{}
+#footer .bottom select#distributors option{}
+#footer .bottom address{}
+#footer .bottom .policies{display: flex; justify-content: space-around; width: 55%; font-size: .9rem; margin: 5% 0 5% 5%;}
+#footer .bottom .policies ul{line-height: 1.5;}
+#footer .bottom .policies ul li{text-align: left;}
+#footer .bottom .policies ul li:not(:first-child):hover{color: #5A8FFF; cursor: pointer;}
+
 
 
 
@@ -110,6 +203,12 @@ section{width: 100%; height: 100vh;}
 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin: 1rem; }
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{left: 10px; }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background: linear-gradient(45deg,#6391e6,skyblue,white);}
+.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-vertical, .swiper-vertical>.swiper-pagination-progressbar{width: 8px;}
+.swiper-pagination-bullet {
+  width: 20px; height: 20px; text-align: center; line-height: 20px; font-size: 12px; color: #000; opacity: 1; background: #73b6fd; }
+
+.swiper-pagination-bullet-active{color: #fff; background-color:#007aff; width: 5%; border-radius: 14px; font-weight: bold;}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{text-align: center; position: absolute; bottom: 20%;}
 /* MEDIA QUERIES: */
 @media only screen and (max-width: 768px){
   header{display: none;}
