@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/63e5a82675.js" crossorigin="anonymous"></script>
@@ -181,7 +182,7 @@
                         </ul>
                     </nav>
                 </nav>
-                <a href="#none">
+                <a href="#none" class="menu-btn">
                     <span></span>
                 </a>
             </div>
@@ -194,11 +195,11 @@
                             <div class="swiper-slide">
                                 <img src="./img/banner-01.png" alt="주배너1">
                                 <div class="txtbox">
-                                    <p ata-aos="fade-up" data-aos-duration="3000" data-aos-offset="0">당신의 내일을</p>
-                                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+                                    <p ata-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">당신의 내일을</p>
+                                    <p data-aos="fade-up" data-aos-duration="2000"  data-aos-delay="800">
                                         <strong>함께</strong>하는 금융
                                     </p>
-                                    <p data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0">고객의 마음 속에 First,
+                                    <p data-aos="fade-up" data-aos-duration="2000"  data-aos-delay="700">고객의 마음 속에 First,
                                         JT저축은행</p>
                                     <button>대출</button>
                                     <button>예금</button>
@@ -207,13 +208,13 @@
                             <div class="swiper-slide">
                                 <img src="./img/banner-02.png" alt="주배너2">
                                 <div class="txtbox">
-                                    <p data-aos-duration="2000" data-aos-delay="2000" data-aos-offset="1">더
+                                    <p data-aos-duration="3000" data-aos-delay="2000">더
                                         <strong>가깝게 </strong>다가가겠습니다.
                                     </p>
-                                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-offset="1">더
+                                    <p data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1500">더
                                         <strong>빠르게 </strong>다가가겠습니다.
                                     </p>
-                                    <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500" data-aos-offset="1">고객의 마음 속에 First,
+                                    <p data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1500">고객의 마음 속에 First,
                                         JT저축은행</p>
                                     <button>대출</button>
                                     <button>예금</button>
@@ -230,7 +231,7 @@
                             </div>
                             <ul>
                                 <li><button><img src="./img/Google_Play_icon.png" alt="구글 플레이"></button></li>
-                                <li><button> <img src="./img/App_Store_icon.png" alt="애플 스토어"></button></li>
+                                <li><button><img src="./img/App_Store_icon.png" alt="애플 스토어"></button></li>
                             </ul>
                         </div>
                     </div>
@@ -271,9 +272,9 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide deposit">
                     <div class="contents txtbox">
-                        <p class="category">목돈모으기</p>
-                        <p class="title">종자돈을 만들 수 있는<br>가장 효과적인 방법<br><strong>정기적금</strong></p>
-                        <p class="description">매월 일정금액을 정기적으로 납입하여 만기일에 목돈을<br>수령할 수 있는 목돈만들기용 적립식예금의 대표상품입니다.</p>
+                        <p class="category"  ata-aos="fade-up" data-aos-duration="3000">목돈모으기</p>
+                        <p class="title" ata-aos="fade-up" data-aos-duration="2000">종자돈을 만들 수 있는<br>가장 효과적인 방법<br><strong>정기적금</strong></p>
+                        <p class="description" ata-aos="fade-up" data-aos-duration="2000">매월 일정금액을 정기적으로 납입하여 만기일에 목돈을<br>수령할 수 있는 목돈만들기용 적립식예금의 대표상품입니다.</p>
                         <button class="btn-blue">자세히 보기</button>
                         <ul>
                             <li>
@@ -294,7 +295,7 @@
                   </div>
                   <div class="swiper-slide installment">
                     <div class="image"></div>
-                    <div class="contents txtbox">
+                    <div class="contents right">
                         <p class="category">목돈모으기</p>
                         <p class="title">안전하고 든든한<br>저축은행 대표상품<br><strong>정기예금</strong></p>
                         <p class="description">안전하고 든든한, 더불어 높은 수익까지 누릴 수 있는<br>대표예금상품으로 이자는 복리식, 단리식 중 원하는대로<br>선택 가입이 가능합니다.</p>
@@ -316,7 +317,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide attr1">
-                    <div class="contents txtbox">
+                    <div class="txtbox contents">
                         <p class="category">목돈모으기</p>
                         <p class="title">안전하고 든든한<br>저축은행 대표상품<br><strong>정기예금</strong></p>
                         <p class="description">안전하고 든든한, 더불어 높은 수익까지 누릴 수 있는<br>대표예금상품으로 이자는 복리식, 단리식 중 원하는대로<br>선택 가입이 가능합니다.</p>
@@ -465,6 +466,7 @@
             <div class="swiper-pagination"></div>    
     </main>
     </div>
+    
 </body>
 
 
