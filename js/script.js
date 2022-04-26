@@ -11,11 +11,11 @@ document.onmousedown=disableclick;
 // HEADER:
 window.onscroll=헤더교체;
 function 헤더교체(){
-  if(document.body.scrollTop>800 || document.documentElement.scrollTop > 800){
-    document.getElementById('nav1').style.top='0';
+  if(document.body.scrollTop>400 || document.documentElement.scrollTop > 400){
+    document.getElementById('header').style.backgroundColor='black';
     
   }else{
-    document.getElementById('nav1').style.top='-80px';
+    document.getElementById('header').style.backgroundColor='transparent';
   }
 }
 
@@ -67,6 +67,7 @@ var mainCar = new Swiper(".main-carousels", {
     pagination: {
       el: ".swiper-pagination1",
       clickable: true,
+      draggable: false,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
