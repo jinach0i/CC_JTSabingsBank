@@ -45,10 +45,10 @@ var mainCar = new Swiper(".main-carousels", {
     spaceBetween: 0,
     speed:1000,
     centeredSlides: true,
-    //  autoplay: {
-    //    delay: 3000,
-    //    disableOnInteraction: false,
-    //  },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -61,8 +61,8 @@ var mainCar = new Swiper(".main-carousels", {
     //   disableOnInteraction: false,
     // },
     navigation: {
-      nextEl: ".swiper-button-next2",
-      prevEl: ".swiper-button-prev2",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     loop:true,
     pagination: {
